@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Cyberpunk Gaming</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+    <link rel="stylesheet" type="text/css" href="css/chatSupport.css">
+    <script src="js/chatSupport.js"></script>
+    <script src="js/faq.js"></script>
+    <style>
+        
+       body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color:#181717;
+            background-color:  whitesmoke;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+      
+        #faq {
+            background-color: #f3ecec;
+            color: #181717;
+            padding: 50px;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        #faq h2,
+        #faq p,
+        .faq-question,
+        .faq-answer {
+            color:#181717;
+        }
+
+        .faq-item {
+            margin-bottom: 40px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .faq-question:before {
+            content: "+";
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+
+        .faq-question.active:before {
+            content: "-";
+        }
+
+        .expand-collapse-links {
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .expand-collapse-links a {
+            color: #e6c700;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-right: 20px;
+            transition: color 0.3s;
+        }
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            #faq {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrap">
+        <nav class="navbar">
+            <a href="homepage.html" class="logo">Cyberpunk</a>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Games</a>
+                    <div class="dropdown-content">
+                        <a href="cyberpunk2077.html">Cyberpunk 2077</a>
+                        <a href="phantomliberty.html">Phantom Liberty</a>
+                    </div>
+                </li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="#" onclick="toggleChat()">Support</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div class="heading">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+            </div>
+
+            <div class="expand-collapse-links">
+                <a href="#" id="expand-all">Expand All</a>
+                <span>|</span>
+                <a href="#" id="collapse-all">Collapse All</a>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What games are available on your platform?</div>
+                <div class="faq-answer">
+                    <p>Our gaming platform boasts an extensive library featuring a diverse range of games, including popular titles, indie gems, and classic favorites. From action-packed adventures to immersive simulations, we strive to cater to a broad spectrum of gaming preferences. Explore our catalog to discover the latest releases, exclusive content, and timeless classics that guarantee an exciting gaming experience.</p>
+                </div>
+                <div class="faq-question">Is there a cost to join or use your gaming platform?</div>
+                <div class="faq-answer">
+                    <p>Joining our gaming platform is absolutely free! We believe in providing access to high-quality gaming experiences without imposing any upfront costs. While certain premium features or exclusive content may be available through optional subscriptions, the core functionality of our platform remains accessible to all users without any membership fees.</p>
+                </div>
+                <div class="faq-question">What platforms/devices are supported for gaming on your website?</div>
+                <div class="faq-answer">
+                    <p>Our gaming platform is designed to be versatile and compatible with a variety of devices. Whether you prefer gaming on a powerful PC, a gaming console, or a mobile device, we've optimized our platform to deliver a seamless experience across multiple platforms. Dive into the world of gaming on your terms, wherever and whenever you choose.</p>
+                </div>
+                <div class="faq-question">Are there system requirements for playing games on your platform?</div>
+                <div class="faq-answer">
+                    <p>To ensure an optimal gaming experience, we provide detailed system requirements for each game in our catalog. These specifications outline the minimum and recommended hardware and software configurations. Whether you're gaming on a high-end gaming rig or a more modest setup, we strive to accommodate a wide range of systems, allowing gamers of all kinds to enjoy our offerings.</p>
+                </div>
+                <div class="faq-question">Do you offer multiplayer or cooperative gaming options?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! Multiplayer and cooperative gaming are integral aspects of our platform. Connect with friends or make new ones as you embark on epic adventures together. From competitive multiplayer modes to cooperative campaigns, our platform provides a social gaming experience that enhances the enjoyment of our diverse game collection.</p>
+                </div>
+                <div class="faq-question">What kind of support do you provide for technical issues or inquiries?</div>
+                <div class="faq-answer">
+                    <p>Our commitment to customer satisfaction extends to comprehensive support services. Our dedicated support team is available to assist you with any technical issues or inquiries you may encounter. Visit our support page for a range of resources, including FAQs, troubleshooting guides, and direct contact options. We understand that technical hiccups happen, and we're here to ensure your gaming experience remains smooth and enjoyable.
+                            Can I purchase in-game items or currency on your platform?</p>
+                </div>
+                <div class="faq-question">How often do you release new games or updates?</div>
+                <div class="faq-answer">
+                    <p>We are dedicated to keeping our gaming platform fresh and exciting. New game releases and updates are regularly added to our catalog to ensure our users have access to the latest and greatest content. Stay tuned to our announcements, newsletters, and social media channels to stay informed about upcoming releases, expansions, and updates that will continually enrich your gaming experience.</p>
+                </div>
+                <div class="faq-question">Are there parental controls available for restricting content?</div>
+                <div class="faq-answer">
+                    <p>Yes, we prioritize the safety and well-being of all users, including younger gamers. Our platform offers robust parental control features that allow parents or guardians to set restrictions on the content accessible to their children. From limiting playtime to restricting specific game genres, our parental controls provide peace of mind for families using our gaming platform.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <div>Chat Assistant</div>
+                <div>
+                    <button class="minimize-btn" onclick="minimizeChat()">-</button>
+                    <button class="close-btn" onclick="closeChat()">x</button>
+                </div>
+            </div>
+            <div id="chat-container"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your question...">
+                <button onclick="sendMessage()">➡</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Cyberpunk Gaming. All rights reserved.</p>
+            <div>
+                <a href="TermsandPrivacy.html">Terms and Privacy Policy</a>
+                <a href="FAQ.html">FAQs</a>
+                <a href="UserAgreement.html">User Agreement</a>
+                <a href="#" onclick="toggleChat()">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

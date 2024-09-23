@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Agreement - Cyberpunk Gaming</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+    <link rel="stylesheet" type="text/css" href="css/chatSupport.css">
+    <script src="js/chatSupport.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            color: black;
+        }
+        #agreement{
+            padding: 100px;
+            padding-top: 20px;
+        }
+        h2 {
+            color: black;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrap">
+        <nav class="navbar">
+            <a href="homepage.html" class="logo">Cyberpunk</a>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Games</a>
+                    <div class="dropdown-content">
+                        <a href="cyberpunk2077.html">Cyberpunk 2077</a>
+                        <a href="phantomliberty.html">Phantom Liberty</a>
+                    </div>
+                </li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="#"  onclick="toggleChat()">Support</a></li>
+            </ul>
+        </nav>
+
+        <section id="agreement">
+            <h2>User Agreement</h2>
+            <p>This User Agreement ("Agreement") is entered into between you ("User") and Cyberpunk Gaming ("we," "us," or "our"), the operator of the Cyberpunk 2077 gaming website ("Website"). By accessing or using the Website, you agree to comply with and be bound by the terms and conditions outlined in this Agreement.</p>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By using the Website, you acknowledge that you have read, understood, and agree to be bound by the terms and conditions of this Agreement. If you do not agree with any part of these terms, you may not access or use the Website.</p>
+
+            <h3>2. Age Restriction</h3>
+            <p>You must be at least 18 years old to use this Website. By using the Website, you warrant that you are at least 18 years old.</p>
+
+            <h3>3. User Account</h3>
+            <p>Some features of the Website may require you to create a user account. You are responsible for maintaining the confidentiality of your account information, including your username and password. You agree to accept responsibility for all activities that occur under your account.</p>
+
+            <h3>4. Code of Conduct</h3>
+            <p>While using the Website, you agree not to engage in any activities that may:</p>
+            <ul>
+                <li>Violate any applicable laws or regulations;</li>
+                <li>Infringe upon the rights of others, including intellectual property rights;</li>
+                <li>Interfere with or disrupt the functionality of the Website;</li>
+                <li>Transmit any harmful or malicious code, viruses, or other destructive elements.</li>
+            </ul>
+
+            <h3>5. Intellectual Property</h3>
+            <p>All content and materials on the Website, including but not limited to text, graphics, logos, images, and software, are the property of Cyberpunk Gaming or its licensors and are protected by intellectual property laws.</p>
+
+            <h3>6. Termination</h3>
+            <p>We reserve the right to suspend or terminate your access to the Website, with or without notice, for any conduct that we believe violates this Agreement or is harmful to other users or third parties or for any other reason.</p>
+
+            <h3>7. Limitation of Liability</h3>
+            <p>Cyberpunk Gaming is not liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access or use of the Website.</p>
+
+            <h3>8. Changes to Terms</h3>
+            <p>Cyberpunk Gaming reserves the right to modify or replace these terms at any time. Your continued use of the Website after changes constitute acceptance of the updated terms.</p>
+
+            <h3>9. Governing Law</h3>
+            <p>This Agreement is governed by and construed in accordance with the laws of Canada, without regard to its conflict of law principles. By using the Website, you agree to submit to the personal jurisdiction of the courts located within [Your Jurisdiction] for the resolution of any disputes.</p>
+
+        </section>
+
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <div>Chat Assistant</div>
+                <div>
+                    <button class="minimize-btn" onclick="minimizeChat()">-</button>
+                    <button class="close-btn" onclick="closeChat()">x</button>
+                </div>
+            </div>
+            <div id="chat-container"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your question...">
+                <button onclick="sendMessage()">➡</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Cyberpunk Gaming. All rights reserved.</p>
+            <div>
+                <a href="TermsandPrivacy.html">Terms and Privacy Policy</a>
+                <a href="FAQ.html">FAQs</a>
+                <a href="UserAgreement.html">User Agreement</a>
+                <a href="#" onclick="toggleChat()">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

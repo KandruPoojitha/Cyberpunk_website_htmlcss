@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Privacy - Cyberpunk Gaming</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+    <link rel="stylesheet" type="text/css" href="css/chatSupport.css">
+    <script src="js/chatSupport.js"></script>
+    <style>
+         body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            color: #090909;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color:  whitesmoke;
+        }
+        h1, h2 {
+            color: #060606;
+        }
+        h1{
+           text-align: center;
+        }
+        section {
+            padding: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrap">
+        <nav class="navbar">
+            <a href="homepage.html" class="logo">Cyberpunk</a>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Games</a>
+                    <div class="dropdown-content">
+                        <a href="cyberpunk2077.html">Cyberpunk 2077</a>
+                        <a href="phantomliberty.html">Phantom Liberty</a>
+                    </div>
+                </li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="#"  onclick="toggleChat()">Support</a></li>
+            </ul>
+        </nav>
+        <section class="container">
+            <h1>Terms of Service and Privacy Policy</h1>
+            <h2>Terms of Service</h2>
+            <ol>
+                <li><h3>Acceptance of Terms</h3>
+                    <p>By accessing or using the Cyberpunk Gaming website, you agree to comply with and be bound by these Terms of Service.</p>
+                </li>
+                <li><h3>User Eligibility</h3>
+                    <p>You must be at least 18 years old to use this website. By using the website, you warrant that you are at least 18 years old.</p>
+                </li>
+                <li><h3>User Account</h3>
+                    <p>Some features may require you to create a user account. You are responsible for maintaining the confidentiality of your account information.</p>
+                </li>
+                <li><h3>Intellectual Property</h3>
+                    <p>All content and materials on the website, including but not limited to text, graphics, logos, images, and software, are the property of Cyberpunk Gaming and are protected by intellectual property laws.</p>
+                </li>
+                <li><h3>Prohibited Activities</h3>
+                    <p>You agree not to engage in any prohibited activities, including but not limited to hacking, unauthorized access, or any activity that may disrupt the website's functionality.</p>
+                </li>
+                <li><h3>Limitation of Liability</h3>
+                    <p>Cyberpunk Gaming is not liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access or use of the website.</p>
+                </li>
+                <li><h3>Changes to Terms</h3>
+                    <p>Cyberpunk Gaming reserves the right to modify or replace these Terms of Service at any time. Your continued use of the website after changes constitutes acceptance.</p>
+                </li>
+            </ol>
+
+            <h2>Privacy Policy</h2>
+            <ol>
+                <li><h3>Information Collection</h3>
+                    <p>Cyberpunk Gaming may collect personal information, including but not limited to name, email address, and user preferences, for the purpose of providing services and improving user experience.</p>
+                </li>
+                <li><h3>Information Use</h3>
+                    <p>Personal information may be used for account management, communication, and website improvement. We do not sell or share your personal information with third parties.</p>
+                </li>
+                <li><h3>Cookies and Tracking</h3>
+                    <p>Cyberpunk Gaming uses cookies and similar tracking technologies to enhance user experience and gather information about how the website is used.</p>
+                </li>
+                <li><h3>Security</h3>
+                    <p>We take reasonable measures to protect your personal information, but no method of transmission over the internet is entirely secure. Cyberpunk Gaming is not responsible for unauthorized access.</p>
+                </li>
+                <li><h3>Third-Party Links</h3>
+                    <p>The website may contain links to third-party websites. Cyberpunk Gaming is not responsible for the privacy practices or content of these sites.</p>
+                </li>
+                <li><h3>Children's Privacy</h3>
+                    <p>This website is not intended for children under 13 years of age. We do not knowingly collect or store personal information from children.</p>
+                </li>
+                <li><h3>Changes to Privacy Policy</h3>
+                    <p>Cyberpunk Gaming reserves the right to modify or update this Privacy Policy at any time. Users will be notified of significant changes.</p>
+                </li>
+            </ol>
+        </section>
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <div>Chat Assistant</div>
+                <div>
+                    <button class="minimize-btn" onclick="minimizeChat()">-</button>
+                    <button class="close-btn" onclick="closeChat()">x</button>
+                </div>
+            </div>
+            <div id="chat-container"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your question...">
+                <button onclick="sendMessage()">➡</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Cyberpunk Gaming. All rights reserved.</p>
+            <div>
+                <a href="TermsandPrivacy.html">Terms and Privacy Policy</a>
+                <a href="FAQ.html">FAQs</a>
+                <a href="UserAgreement.html">User Agreement</a>
+                <a href="#" onclick="toggleChat()">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

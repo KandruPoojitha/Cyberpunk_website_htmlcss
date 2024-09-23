@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Gaming</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+    <link rel="stylesheet" type="text/css" href="css/chatSupport.css">
+    <script src="js/chatSupport.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #0f0f0f;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .welcome {
+            height: 90vh;
+            background: url('./assets/cyberpunk_homepage.jpg') no-repeat;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        section {
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        section h1{
+            font-size: 2.5em;
+            color: white;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            text-align: center;
+        }
+        section h2{
+            font-size: 2.0em;
+            color: rgb(250, 249, 249);
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            text-align: center;
+        }
+        section h3{
+            font-size: 1.8em;
+            color: rgb(250, 249, 249);
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            text-shadow: #0f0f0fb2;
+        }
+
+        section p {
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+        }
+
+        #welcome-txt{
+            position: absolute;
+            top: 15%;
+            left: 5%; 
+            text-align: left; 
+            z-index: 1;
+            max-width: 600px; 
+            width: 100%;
+            text-align: center;
+        }
+        #welcome-txt p{
+            color: rgb(41, 37, 37);
+        }
+        .game {
+            margin-top: 250px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.897); 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-style: italic;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .btn:hover, .btn:focus {
+            background-color: rgb(59, 56, 52); 
+            transform: scale(1.05);
+        }
+        
+        .btn:active {
+            transform: scale(0.95);
+        }
+        
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }  
+    </style>
+</head>
+
+<body>
+    <div class="content-wrap">
+
+        <nav class="navbar">
+            <a href="homepage.html" class="logo">Cyberpunk</a>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Games</a>
+                    <div class="dropdown-content">
+                        <a href="cyberpunk2077.html">Cyberpunk 2077</a>
+                        <a href="phantomliberty.html">Phantom Liberty</a>
+                    </div>
+                </li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="#" onclick="toggleChat()">Support</a></li>
+            </ul>
+        </nav>
+
+        <section class="welcome">
+            <div id = "welcome-txt">
+            <h1>Welcome to Cyberpunk Gaming</h1>
+            <p>Explore the futuristic world of Cyberpunk 2077 and other thrilling games.<br> Get exclusive merchandise, support, and more!</p>
+            </div>
+        </section>
+
+        <section id="games">
+            <section id="cyberpunk" style="height: 80vh; background: url('./assets/cyberpunk2077.avif') no-repeat; background-size: cover; background-position: center; position: relative; overflow: hidden;">
+                <h2>Featured Games</h2>
+                <div class="game">
+                    <p>Dive into the immersive world of Cyberpunk 2077 and experience the future like never before.</p>
+                    <a href="cyberpunk2077.html" class="btn"> Click here </a>
+                </div>
+            </section>
+            <section id="phantomliberty" style="height: 80vh; background: url('./assets/phantom-liberty-cover.jpg') no-repeat; background-position:top;background-size:cover; overflow: hidden;">
+                <div class="game">
+                    <p>Embark on a thrilling adventure in the world of Phantom Liberty.<br> Uncover secrets and face futuristic challenges.</p>
+                    <a href="phantomliberty.html" class="btn"> Click here</a>
+                </div>
+            </section>
+        </section>
+
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <div>Chat Assistant</div>
+                <div>
+                    <button class="minimize-btn" onclick="minimizeChat()">-</button>
+                    <button class="close-btn" onclick="closeChat()">x</button>
+                </div>
+            </div>
+            <div id="chat-container"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your question...">
+                <button onclick="sendMessage()">➡</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Cyberpunk Gaming. All rights reserved.</p>
+            <div>
+                <a href="TermsandPrivacy.html">Terms and Privacy Policy</a>
+                <a href="FAQ.html">FAQs</a>
+                <a href="UserAgreement.html">User Agreement</a>
+                <a href="#" onclick="toggleChat()">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
